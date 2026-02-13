@@ -306,7 +306,7 @@ input.points {
     width: 20vw;
     margin: 1vw;
     border-radius: 5px;
-    font-size: larger;
+    font-size: 100%;
 }
 
 .choice {
