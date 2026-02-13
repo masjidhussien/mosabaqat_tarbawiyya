@@ -33,19 +33,22 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
+
 .quizzes {
+    position: relative;
     align-self: center;
     justify-self: center;
     align-items: center;
     justify-items: center;
     align-content: center;
     justify-content: center;
+    text-align: center;
     height: 100%;
     width: 100%;
 }
 
 .quizzes h1 {
-    top: -20vh;
+    top: -15vh;
     position: relative;
 }
 
@@ -70,7 +73,7 @@ body::-webkit-scrollbar {
 }
 
 .body>h1 {
-    top: -10vh;
+    top: -2vh;
     position: relative;
 }
 
@@ -195,12 +198,13 @@ input.points {
 .qism,
 .nashat {
     z-index: 100;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     align-items: center;
     justify-items: center;
     align-self: center;
     justify-self: center;
-
 }
 
 .logo {
@@ -304,6 +308,7 @@ input.points {
     border-radius: 5px;
     font-size: larger;
 }
+
 .choice {
     position: relative;
     background-image: var(--choice-bg-img);
@@ -320,15 +325,17 @@ input.points {
     inset: 0;
     background: transparent;
     opacity: 0;
-    z-index: 1; /* 👈 overlay layer */
+    z-index: 1;
+    /* 👈 overlay layer */
     transition: opacity 0.6s ease-in-out;
 }
 
 /* text/content layer */
-.choice > span {
+.choice>span {
     transition: opacity 0.6s ease-in-out;
     position: relative;
-    z-index: 2; /* 👈 stays above overlay */
+    z-index: 2;
+    /* 👈 stays above overlay */
 }
 
 .choice.red::after {
@@ -356,7 +363,7 @@ input.points {
     right: 2.5vw;
     direction: rtl;
     color: white;
-    background-image: url(./clock.png);
+    background-image: url(../images/clock.png);
     background-repeat: no-repeat;
     background-position: 0 center;
     /* Puts the clock on the far left */
