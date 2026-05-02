@@ -90,6 +90,7 @@ body::-webkit-scrollbar {
 }
 
 .questions>.question {
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,22 +99,27 @@ body::-webkit-scrollbar {
     padding: 1vw;
     margin: 1.5vh;
     background-color: var(--question-button-color1);
+    box-shadow: 4px 4px var(--question-button-color1-chosen);
+    border: 1px solid rgba(255,255,255,.1);
     color: var(--question-button-font-color);
     cursor: pointer;
     transition: transform 0.2s;
 }
 
 .questions>.question:nth-child(2n-1) {
+    box-shadow: 4px 4px var(--question-button-color2-chosen);
     background-color: var(--question-button-color2);
     color: var(--question-button-font-color);
 }
 
 .questions>.question[chosen=true] {
+    box-shadow: 2px 2px var(--question-button-color1);
     background-color: var(--question-button-color1-chosen);
     color: var(--question-button-font-color-chosen);
 }
 
 .questions>.question:nth-child(2n-1)[chosen=true] {
+    box-shadow: 2px 2px var(--question-button-color2);
     background-color: var(--question-button-color2-chosen);
     color: var(--question-button-font-color-chosen);
 }
