@@ -7,7 +7,6 @@
     backdrop-filter: blur(6px);
     z-index: -1;
 }
-
 /* Main Popup */
 .popup {
     position: fixed;
@@ -17,64 +16,50 @@
     transform: translate(-50%, -50%) scale(0.8);
     width: min(500px, 90vw);
     padding: 30px;
-
     background: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(20px);
-
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.1);
-
     box-shadow: 
         0 0 25px rgba(0, 229, 255, 0.15),
         0 0 60px rgba(123, 97, 255, 0.1);
-
     opacity: 0;
     transition: all 0.35s ease;
 }
-
 /* Active state (you toggle this with JS) */
 .popup.active {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
-
 /* Close button */
 .popup .closePopup {
     position: absolute;
     top: 12px;
     right: 12px;
-
     width: 36px;
     height: 36px;
-
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: rgba(255,255,255,0.05);
     color: #ff4d4d;
     font-weight: bold;
-
     cursor: pointer;
     transition: 0.2s;
 }
-
 .popup .closePopup:hover {
     background: rgba(255, 77, 77, 0.2);
     box-shadow: 0 0 10px #ff4d4d;
 }
-
 /* Title */
 .popup .popupTitle {
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 15px;
-
     color: #ff4d4d;
     text-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
 }
-
 /* Content */
 .popup .popupContent {
     text-align: center;
@@ -83,14 +68,12 @@
     margin-bottom: 25px;
     line-height: 1.6;
 }
-
 /* Buttons container */
 .popup .answers {
     display: flex;
     gap: 15px;
     justify-content: center;
 }
-
 /* Buttons base */
 .popup .answers div {
     flex: 1;
@@ -98,46 +81,38 @@
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
-
     cursor: pointer;
     transition: 0.25s;
 }
-
 /* OK button */
 .popup .okPopup {
     background: linear-gradient(135deg, #00e5ff, #00bcd4);
     color: white;
     box-shadow: 0 0 10px #00e5ff;
 }
-
 .popup .okPopup:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 20px #00e5ff;
 }
-
 /* Cancel button */
 .popup .cancelPopup {
     background: linear-gradient(135deg, #ff4d4d, #c1121f);
     color: white;
     box-shadow: 0 0 10px #ff4d4d;
 }
-
 .popup .cancelPopup:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 20px #ff4d4d;
 }
-
 /* Mobile */
 @media (max-width: 600px) {
     .popup {
         width: 90vw;
         padding: 20px;
     }
-
     .popup .popupContent {
         font-size: 1rem;
     }
-
     .popup .answers {
         flex-direction: column;
     }

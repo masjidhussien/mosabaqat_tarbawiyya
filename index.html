@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ar">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="./assets/styles/popup.css">
     <title>المسابقة التربوية</title>
 </head>
-
 <body>
     <div class="logo">
         <img draggable="false" src="./assets/images/logo.png" alt="شعار">
@@ -19,12 +17,10 @@
         <img draggable="false" src="./assets/images/qism_tarbiya.png" alt="شعار">
         <p>قـــســـم الــتّـــــربـــيـــة</p>
     </div>
-    
     <div class="nashat">
         <img draggable="false" src="./assets/images/logo.png" alt="شعار">
         <p>لا مسابقة</p>
     </div>
-
     <div class="popup hidden">
         <div class="closePopup">X</div>
         <h1 class="popupTitle">تحذير!</h1>
@@ -33,16 +29,13 @@
             <div class="cancelPopup">لا</div>
             <div class="okPopup">نعم</div>
         </div>
-        </div>
+    </div>
     <div class="quizzes">
-        
     </div>
     <div class="body">
         <h1>اِختر سؤالًا من الأسئلة التّالية</h1>
         <div class="questions"></div>
-        
         <div class="reset">RESET</div>
-
         <div class="teams">
             <div class="team1">
                 <img src="" alt="">
@@ -60,18 +53,22 @@
             </div>
         </div>
     </div>
-
     <div class="questionPage">
         <h1>الـــــــــــــسّـــــــــــؤال</h1>
         <div class="questionContent"></div>
         <div class="choices">
         </div>
         <div class="timer">
-            <span red="false" class="time">0</span><span> ثـ</span>
+            <div id="time">
+                <span red="false" class="time">0</span><span> ثـ</span>
+            </div>
+            <button class="resetTimer">Reset</button>
         </div>
-        <label for="" class="back">←</label>
+        <div class="controls">
+            <label for="" class="back">←</label>
+            <label for="" class="done">✅</label>
+        </div>
     </div>
-
     <script src="./lib/config.js"></script>
     <script src="./lib/showPopup.js"></script>
     <script type="module" src="./lib/loadConfig.js"></script>

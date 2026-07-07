@@ -9,18 +9,15 @@
     --question-page-option-color: rgb(255, 166, 0);
     --question-page-font-color: white;
 }
-
 @font-face {
     font-family: "Lyon Arabic Text";
     src: url(../font.otf);
 }
-
 * {
     font-family: "Lyon Arabic Text";
     direction: rtl;
     user-select: none;
 }
-
 html,
 body {
     overflow: hidden;
@@ -29,11 +26,9 @@ body {
     height: 100%;
     width: 100%;
 }
-
 body::-webkit-scrollbar {
     display: none;
 }
-
 .quizzes {
     position: relative;
     align-self: center;
@@ -46,12 +41,10 @@ body::-webkit-scrollbar {
     height: 100%;
     width: 100%;
 }
-
 .quizzes h1 {
     top: -15vh;
     position: relative;
 }
-
 .body {
     height: 100%;
     width: 100%;
@@ -67,16 +60,13 @@ body::-webkit-scrollbar {
     justify-self: center;
     text-align: center;
 }
-
 .body {
     z-index: 0;
 }
-
 .body>h1 {
     top: -2vh;
     position: relative;
 }
-
 .questions {
     direction: ltr;
     display: flex;
@@ -88,7 +78,6 @@ body::-webkit-scrollbar {
     margin: 0 auto;
     font-size: 2.2vh;
 }
-
 .questions>.question {
     border-radius: 6px;
     display: flex;
@@ -100,30 +89,26 @@ body::-webkit-scrollbar {
     margin: 1.5vh;
     background-color: var(--question-button-color1);
     box-shadow: 4px 4px var(--question-button-color1-chosen);
-    border: 1px solid rgba(255,255,255,.1);
+    border: 1px solid rgba(255, 255, 255, .1);
     color: var(--question-button-font-color);
     cursor: pointer;
     transition: transform 0.2s;
 }
-
 .questions>.question:nth-child(2n-1) {
     box-shadow: 4px 4px var(--question-button-color2-chosen);
     background-color: var(--question-button-color2);
     color: var(--question-button-font-color);
 }
-
 .questions>.question[chosen=true] {
     box-shadow: 2px 2px var(--question-button-color1);
     background-color: var(--question-button-color1-chosen);
     color: var(--question-button-font-color-chosen);
 }
-
 .questions>.question:nth-child(2n-1)[chosen=true] {
     box-shadow: 2px 2px var(--question-button-color2);
     background-color: var(--question-button-color2-chosen);
     color: var(--question-button-font-color-chosen);
 }
-
 .teams {
     width: 100%;
     display: flex;
@@ -134,7 +119,6 @@ body::-webkit-scrollbar {
     align-content: center;
     justify-content: center;
 }
-
 .teams>div {
     display: block;
     position: relative;
@@ -142,7 +126,6 @@ body::-webkit-scrollbar {
     height: 1vh;
     bottom: -5vh;
 }
-
 .teams>div>input.name {
     margin-bottom: 3vh;
     border: none;
@@ -151,28 +134,22 @@ body::-webkit-scrollbar {
     width: 15vh;
     font-size: large;
 }
-
 .teams>div>input {
     border-radius: 5px;
 }
-
 .team1 {
     position: absolute;
     left: 0;
 }
-
 .team1>input {
     color: var(--question-button-color1);
 }
-
 .team2 {
     right: 0;
 }
-
 .team2>input {
     color: var(--question-button-color2);
 }
-
 input.points {
     width: 2vw;
     height: 2vw;
@@ -182,7 +159,6 @@ input.points {
     text-align: center;
     border: none;
 }
-
 .reset {
     position: relative;
     bottom: -15vh;
@@ -194,12 +170,10 @@ input.points {
     font-size: x-large;
     transition: background-color .3s ease-in-out;
 }
-
 .reset:hover {
     background-color: var(--question-button-color1-chosen);
     transition: background-color .3s ease-in-out;
 }
-
 .logo,
 .qism,
 .nashat {
@@ -212,23 +186,19 @@ input.points {
     align-self: center;
     justify-self: center;
 }
-
 .logo {
     top: 3vh;
     right: 8vh;
 }
-
 .qism {
     top: 3vh;
     left: 8vh;
 }
-
 .nashat {
     text-align: center;
     bottom: 3vh;
     left: 6vh;
 }
-
 .logo>p,
 .qism>p,
 .nashat>p {
@@ -244,7 +214,6 @@ input.points {
     top: -2vh;
     font-size: 3vh;
 }
-
 .logo>img,
 .qism>img,
 .nashat>img {
@@ -257,20 +226,17 @@ input.points {
     height: 15vh;
     width: 15vh;
 }
-
 .questionPage {
     z-index: 5;
     height: 100%;
     width: 100%;
     background-color: var(--question-page-background-color);
 }
-
 .questionPage>h1 {
     padding-top: 5vh;
     align-self: center;
     justify-self: center;
 }
-
 .questionPage>.questionContent {
     margin-top: 10vh;
     width: 60vw;
@@ -279,14 +245,12 @@ input.points {
     justify-self: center;
     font-size: xx-large;
 }
-
 .questionPage>* {
     text-align: center;
     align-content: center;
     justify-content: center;
     color: var(--question-page-font-color);
 }
-
 .questionPage>.choices {
     display: grid;
     /* This creates two equal columns */
@@ -299,11 +263,9 @@ input.points {
     align-items: center;
     justify-items: center;
 }
-
 .questionPage>.choices>.choice:nth-child(2n-1):last-child {
     transform: translate(-62.5%);
 }
-
 .questionPage>.choices>.choice {
     align-content: center;
     justify-content: center;
@@ -315,7 +277,6 @@ input.points {
     border-radius: 5px;
     font-size: 100%;
 }
-
 .choice {
     position: relative;
     background-image: var(--choice-bg-img);
@@ -324,7 +285,6 @@ input.points {
     overflow: hidden;
     transition: opacity 0.6s ease-in-out;
 }
-
 /* overlay */
 .choice::after {
     content: "";
@@ -336,7 +296,6 @@ input.points {
     /* 👈 overlay layer */
     transition: opacity 0.6s ease-in-out;
 }
-
 /* text/content layer */
 .choice>span {
     transition: opacity 0.6s ease-in-out;
@@ -344,18 +303,14 @@ input.points {
     z-index: 2;
     /* 👈 stays above overlay */
 }
-
 .choice.red::after {
     background-color: red;
     opacity: 1;
 }
-
 .choice.green::after {
     background-color: green;
     opacity: 1;
 }
-
-
 .questionPage>.timer {
     height: 6vw;
     width: 6vw;
@@ -377,16 +332,21 @@ input.points {
     background-size: 100%;
     /* Adjust size */
 }
-
-.timer>span {
+.timer>div>span {
     position: relative;
     top: 1.5vh;
 }
-
+.timer {
+    display: flex;
+    flex-direction: column;
+}
+.timer button {
+    position: relative;
+    bottom: -1.5vh;
+}
 .time[red=true] {
     color: red;
 }
-
 /* Ensure backgrounds cover the area properly */
 .body,
 .questionPage {
@@ -394,21 +354,38 @@ input.points {
     background-position: center;
     background-repeat: no-repeat;
 }
-
 /* Apply the choice background if it exists */
 .choice {
     background-image: var(--choice-bg-img);
     background-size: 100% 100%;
     /* Stretch to fit button shape */
 }
-.back {
+.controls {
+    display: flex;
+    flex-direction: row;
+    gap: 1;
+}
+.back,
+.done {
     position: absolute;
     direction: ltr;
     cursor: pointer;
-    top: 10px;
-    left: 10px;
+    text-align: center;
+    align-content: center;
     width: 50px;
     height: 50px;
-    background-color: rgba(255,255,255,.4);
+    background-color: rgba(255, 255, 255, .4);
     border-radius: 5px
+}
+.controls {
+    display: none;
+}
+.back {
+    top: 10px;
+    left: 10px;
+}
+.done {
+    top: 10px;
+    left: 70px;
+    background-color: rgba(0, 128, 0, .4);
 }

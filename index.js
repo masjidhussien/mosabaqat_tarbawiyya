@@ -6,7 +6,6 @@ const questionPage = document.getElementsByClassName("questionPage")[0];
 const choicesContainerElement = (document.getElementsByClassName("choices")[0]);
 let choicesContainer = Array.from(choicesContainerElement.children);
 let turn = sessionStorage.getItem("turn") ? sessionStorage.getItem("turn") : (() => { sessionStorage.setItem("turn", 0); return 0; })();
-
 for (let i = 0; i < teamNameInputs.length; i++) {
     teamNameInputs.item(i).onchange = () => {
         sessionStorage.setItem(`team${i + 1 % teamNameInputs.length}`, JSON.stringify({ name: teamNameInputs.item(i).value, points: parseInt(document.getElementsByClassName(`points`)[i].value ?? 0) }));
@@ -34,7 +33,6 @@ window.onload = () => {
         })
     })
 }
-
 for (let i = 0; i < (questionsContainer.length); i++) {
     questionsContainer.item(i).onclick = () => {
         processQuestion(i);
